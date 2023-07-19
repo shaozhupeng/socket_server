@@ -30,7 +30,7 @@ async def handle_connection(websocket, path):
         print(f"{username} disconnected.")
 
 # 启动WebSocket服务器
-start_server = websockets.serve(handle_connection, "localhost", 8765)
+start_server = websockets.serve(handle_connection, "127.0.0.1", 9006)
 
 # 运行服务器，接收连接
 asyncio.get_event_loop().run_until_complete(start_server)
