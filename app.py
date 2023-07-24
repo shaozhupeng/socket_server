@@ -16,6 +16,7 @@ def read_wave_file(file_path):
 @socketio.on('stream_audio')
 def stream_audio(message):
     room = message['room']
+    print("audio data from flutter: {}".format(message['data']))
     #audio_data = read_wave_file('D:\\workspace\\originAI\\socket_server\\voice_file\\long.wav')
     audio_data = read_wave_file('./voice_file/long.wav')
     # Encode audio data to base64 to transmit as a string
